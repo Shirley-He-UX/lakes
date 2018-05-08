@@ -6,116 +6,106 @@
     <meta name="x5-fullscreen" content="true">
     <meta name="full-screen" content="yes">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
-  <title>Ltter from the System</title>
- <style>
- html, body{
-     background: #000;
-     margin: 0;
-     padding: 0;
-     width: 100%;
-     max-width: 100%;
-     height: 100%;
-     max-height: 100%;
-     text-align:center;
- }
+  <title>Letter from the System</title>
 
- div {
-   background: #000;
-   width: 100%;
-   height: 100%;
-   font-family: 'Teko', sans-serif;
-   font-weight: 300;
-   color: #5dea62;
-     
-   font-size: 1.4em;
-   letter-spacing: .1em;
-   text-align: left;
-   margin:0;
-   padding:60% 5%;
-   position: absolute;
- /*  top: 8em;*/
-   left: auto;
-   animation: 120ms infinite normal glitch;
- }
-
- span {
-   animation: 1500ms infinite normal cursor;
- }
-
- @keyframes glitch {
-   0% {
-     opacity: 0;
-     left: 0;
-   }
-   40% {
-     opacity: 1;
-     left: -.15em;
-   }
-   80% {
-     opacity: 1;
-     left: -.15em;
-   }
- }
-
- @keyframes cursor {
-   0% {
-     opacity: 0;
-     left: 0
-   }
-   40% {
-     opacity: 0;
-     left: -.15em;
-   }
-   80% {
-     opacity: 1;
-     left: -.15em;
-   }
- }
- </style>
   <link href="https://fonts.googleapis.com/css?family=Teko:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+ <style>
+    html, body{
+    background: #000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    text-align:center;
+    overflow:hidden;
+}
 
+div {
+  color: #5dea62;
+  font-family: Teko, sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: .06em;
+  width: 100%;
+  height:100%;
+  text-align: left;
+  margin-left: 4%;
+  position: absolute;
+  padding:40% 5%;
+  left: 0;
+  animation: 120ms infinite normal glitch;
+}
 
-</head>
+span {
+  animation: 1500ms infinite normal cursor;
+}
 
-<body>
-
-  <div>
-  > &nbsp Hi, 10587150<br/>
-  <br/>
-  > &nbsp Follow the instruction<br/>
-    &nbsp &nbsp &nbsp to change your damaged chip.<br/>
-  > &nbsp Go you this coordinate<br/>
-  > &nbsp <code>[13,13]</code><br/>
-  > &nbsp to start the progress.
-  <span id="cursor"> | </span>
-  </div>
-
-<script>
-    // document.body.addEventListener('touchmove', function(event) { 
-    // event.preventDefault();
-    // }, false);
-  var b = document.getElementsByTagName("code")[0];
-  var bs = document.getElementsByTagName("div")[0];
-  setTimeout(function(){
-      bs.setAttribute("style", "color:#000;");
-      bs.setAttribute("style", "background:#5dea62;");
-
-  }, 3000);
-  for(var i=1; i++;i<11){
-      setTimeout(function(){
-          bs.setAttribute("style", "font-color:#000;");
-          bs.setAttribute("style", "background:#5dea62;");
-      }, 3000+i*50);
+@keyframes glitch {
+  0% {
+    opacity: 0;
+    left: 0px;
   }
+  40% {
+    opacity: 1;
+    left: -.06em;
+  }
+  80% {
+    opacity: 1;
+    left: -.06em;
+  }
+}
+@keyframes cursor {
+  0% {
+    opacity: 0;
+    left: 0px;
+  }
+  40% {
+    opacity: 0;
+    left: -.06em;
+  }
+  80% {
+    opacity: 1;
+    left: -.06em;
+  }
+}
 
-  setTimeout(function(){
-      b.innerHTML=("[666,666]");
-      bs.setAttribute("style", "color:#5dea62");
-  }, 3600);
+    </style>
+</head>
+<body>
+      <div id="text">
+      > &nbsp Hi, 10587150<br/>
+      <br/>
+      > &nbsp Follow the instruction<br/>
+        &nbsp &nbsp &nbsp to change your damaged chip.<br/>
+      > &nbsp Go you this coordinate<br/>
+      > &nbsp <code>[13,13]</code><br/>
+      > &nbsp to start the progress.
+      <span id="cursor"> | </span>
+      </div>
+      
+      <script type="text/javascript">
+        document.body.addEventListener('touchmove', function(event) {
+            event.preventDefault();
+        }, false);
+          
+      var b = document.getElementsByTagName("code")[0];
+      var bs = document.getElementById("text");
+      setTimeout(function(){
+          bs.setAttribute("style", "color:#000");
+          bs.setAttribute("style", "background:#5dea62;");
 
-</script>
+      }, 2000);
+      setTimeout(function(){
+          b.innerHTML=("[666,666]");
+          bs.setAttribute("style", "color:#5dea62");
+      }, 2800);
+
+    </script>
 
 </body>
+
 
 </html>
