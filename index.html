@@ -10,36 +10,40 @@
   <link href="https://fonts.googleapis.com/css?family=Teko:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-      html, body{
-      background: #131226;
-      margin: 0;
-      padding: 0;
+    html, body{
+        background: #131226;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        text-align:center;
+        overflow:hidden;
+    }
+    code{
+      font-family: Teko, sans-serif;
+      font-size: 1em;
+      font-weight: 300;
+      letter-spacing: .06em;   
+    }
+    div {
+      background:#131226;
+      color: #00b5d9;
+      font-family: Teko, sans-serif;
+      font-size: 1.4em;
+      font-weight: 300;
+      letter-spacing: .06em;
       width: 100%;
-      max-width: 100%;
-      height: 100%;
-      max-height: 100%;
-      text-align:center;
-      overflow:hidden;
-      position: fixed;
+      height:100%;
+      text-align: left;
+      margin-left: 4%;
+      position: absolute;
+      padding:22% 4%;
+      left: 0;
+      animation: 120ms infinite normal glitch;
     }
 
-    div {
-    background:#131226;
-     background-size: 10%;
-    color: #00b5d9;
-    font-family: Teko, sans-serif;
-    font-size: 1.6em;
-    font-weight: 300;
-    letter-spacing: .06em;
-    width: 100%;
-    height:100%;
-    text-align: left;
-    margin-left: 4%;
-    position: absolute;
-    padding:40% 5%;
-    left: 0;
-    animation: 120ms infinite normal glitch;
-    }
 
     span {
     animation: 1500ms infinite normal cursor;
@@ -78,13 +82,22 @@
 </head>
 <body>
       <div id="text">
-      > &nbsp Hi, 10587150<br/>
+      > &nbsp Dear serial number 3841293,<br/>
       <br/>
-      > &nbsp Follow the instruction<br/>
-        &nbsp &nbsp &nbsp to change your damaged chip.<br/>
-      > &nbsp Go you this coordinate<br/>
-      > &nbsp <code>[13,13]</code><br/>
-      > &nbsp to start the progress.
+      > &nbsp This are your personal <br/>
+        &nbsp &nbsp &nbsp instructions to change<br/>
+        &nbsp &nbsp &nbsp your damaged chip.<br/>
+      > &nbsp Go to this place:<br/>
+      <code>
+      > &nbsp [Segreteria Didattica<br/>
+       &nbsp&nbsp &nbsp &nbsp  in Politecnico di Milano<br/>
+      &nbsp &nbsp &nbsp  
+       (Bovisa Campus), <br/>
+      &nbsp &nbsp &nbsp  
+       building B1]</code><br/>
+      > &nbsp and start the progress.<br/>
+      <br/>
+      > &nbsp from system
       <span id="cursor"> | </span>
       </div>
 
@@ -94,7 +107,8 @@
       var b = document.getElementsByTagName("code")[0];
       var bs = document.getElementById("text");
       setTimeout(function(){
-          b.innerHTML=("[N/A,N/A]");
+          b.innerHTML=("> &nbsp [Entrance of the <br/> &nbsp &nbsp &nbsp B2 building <br/> &nbsp &nbsp &nbsp Politecnico di Milano <br/> &nbsp &nbsp &nbsp (Bovisa Campus)]");
+          bs.setAttribute("style", "color:#00b5d9");
           bs.setAttribute("style", "color:#131226");
           bs.setAttribute("style", "background: #00b5d9");
 //          bs.setAttribute("style", "background: linear-gradient(to right, #00b5d9 0, #000 5%,#00b5d9 10%, #000 14%,#5dea62 18%, #000 20%, #00b5d9 24%, #000 26%, #00b5d9 30%,#000 34%,#5dea62 36%,#000 40%, #5dea62 45%, #000 50%, #5dea62 55%, #000 60%, #5dea62 64%,#000 68%, #5dea62 70%,#000 74%,#5dea62 76%,#000 78%,#5dea62 82%,#000 86%, #5dea62 90%,#000 96%, #5dea62 98%,#000 100%)");
